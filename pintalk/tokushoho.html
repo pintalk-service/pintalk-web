@@ -1,0 +1,130 @@
+<title>特定商取引法に基づく表示 | 地縛板</title>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f7f5f1;
+    --line: #e4e0d8;
+    --ink: #29241c;
+    --ink-soft: #5c5646;
+    --ink-faint: #918a76;
+    --seal: #b8472e;
+    --link: #8a3524;
+    --flag-bg: #fdf1ea;
+    --flag-border: #e7bfa5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b1712;
+      --bg-soft: #241f18;
+      --line: #3a3327;
+      --ink: #f0ece2;
+      --ink-soft: #c9c0ac;
+      --ink-faint: #8f8672;
+      --seal: #e0704f;
+      --link: #e88a6c;
+      --flag-bg: #33241c;
+      --flag-border: #6b4230;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b1712;
+    --bg-soft: #241f18;
+    --line: #3a3327;
+    --ink: #f0ece2;
+    --ink-soft: #c9c0ac;
+    --ink-faint: #8f8672;
+    --seal: #e0704f;
+    --link: #e88a6c;
+    --flag-bg: #33241c;
+    --flag-border: #6b4230;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+    line-height: 1.85;
+  }
+  a { color: var(--link); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  nav.site { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  nav.site .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .brand { font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 18px; text-decoration: none; color: var(--ink); }
+  .navlinks { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  .navlinks a { text-decoration: none; color: var(--ink-soft); }
+  .navlinks a.current { color: var(--seal); font-weight: 700; }
+  .navlinks a:hover { color: var(--link); }
+
+  main { padding: 48px 0 80px; }
+  h1 { font-family: "Shippori Mincho", serif; font-size: 26px; margin: 0 0 6px; }
+  .updated { font-size: 13px; color: var(--ink-faint); margin-bottom: 28px; }
+
+  .fillin {
+    background: var(--flag-bg); border: 1px solid var(--flag-border); border-radius: 6px;
+    padding: 14px 18px; font-size: 13px; color: var(--ink-soft); margin-bottom: 36px;
+  }
+  .fillin b { color: var(--ink); }
+
+  table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 13.5px; }
+  th, td { text-align: left; padding: 10px 12px; border: 1px solid var(--line); color: var(--ink-soft); vertical-align: top; }
+  th { background: var(--bg-soft); color: var(--ink); font-weight: 700; width: 34%; white-space: nowrap; }
+  mark.fill { background: var(--flag-bg); color: var(--seal); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+
+  footer.site { border-top: 1px solid var(--line); padding: 28px 0; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+  footer.site .links { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  footer.site .links a { text-decoration: none; color: var(--ink-soft); }
+  footer.site .copyright { font-size: 12.5px; color: var(--ink-faint); }
+</style>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">地縛板</a>
+    <div class="navlinks">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <a class="current" href="tokushoho.html">特定商取引法に基づく表示</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <h1>特定商取引法に基づく表示</h1>
+  <div class="updated">最終更新日: 2026年9月9日</div>
+
+  <div class="fillin">
+    <b>ご確認ください:</b> 合同会社粋人舎は現在設立手続き中のため、<mark class="fill">黄色でマークした箇所</mark>(所在地・電話番号・代表者名)は仮の状態です。法人設立の完了後、実際の情報に差し替えてください。所在地・電話番号については、個人情報保護の観点から「請求があれば遅滞なく開示します」という記載に留める運用も可能です(通信販売に関するガイドライン上、一定の条件を満たせば認められています)。
+  </div>
+
+  <table>
+    <tr><th>販売事業者</th><td>合同会社粋人舎</td></tr>
+    <tr><th>代表者</th><td><mark class="fill">【代表者氏名】</mark></td></tr>
+    <tr><th>所在地</th><td><mark class="fill">【本店所在地、または「ご請求いただき次第、遅滞なく開示いたします」】</mark></td></tr>
+    <tr><th>電話番号</th><td><mark class="fill">【電話番号、または「ご請求いただき次第、遅滞なく開示いたします」】</mark></td></tr>
+    <tr><th>メールアドレス</th><td>pintalk@suijin-sha.com</td></tr>
+    <tr><th>運営統括責任者</th><td><mark class="fill">【運営統括責任者氏名】</mark></td></tr>
+    <tr><th>追加手数料等の内容</th><td>本サービスのご利用には、別途インターネット接続料金・通信料金がかかります(お客様のご負担となります)。</td></tr>
+    <tr><th>販売価格</th><td>各サブスクリプション・アイテムの購入画面(App Store決済画面)に表示される価格によります。</td></tr>
+    <tr><th>支払方法</th><td>Apple App Storeを通じた決済(クレジットカード等、Appleが提供する決済手段によります)。</td></tr>
+    <tr><th>支払時期</th><td>購入手続き完了時に、Appleの定める方法により課金されます。</td></tr>
+    <tr><th>サービス提供時期</th><td>購入手続き完了後、直ちにアプリ内でご利用いただけます。</td></tr>
+    <tr><th>返品・キャンセルについて</th><td>提供する商品はデジタルコンテンツ(サブスクリプション・消費型アイテム)の性質上、購入後の返品・返金には応じかねます。ご購入の取消し・返金に関するお問い合わせは、Appleの定める手続きに従ってください。サブスクリプションの解約方法についても、Appleのアカウント設定から行っていただく必要があります。</td></tr>
+    <tr><th>動作環境</th><td>iOS(対応バージョンはApp Store記載のとおり)</td></tr>
+  </table>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="links">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <a href="tokushoho.html">特定商取引法に基づく表示</a>
+    </div>
+    <div class="copyright">&copy; 2026 合同会社粋人舎</div>
+  </div>
+</footer>
