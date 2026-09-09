@@ -1,0 +1,146 @@
+<title>地縛板</title>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f7f5f1;
+    --line: #e4e0d8;
+    --ink: #29241c;
+    --ink-soft: #5c5646;
+    --ink-faint: #918a76;
+    --seal: #b8472e;
+    --link: #8a3524;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b1712;
+      --bg-soft: #241f18;
+      --line: #3a3327;
+      --ink: #f0ece2;
+      --ink-soft: #c9c0ac;
+      --ink-faint: #8f8672;
+      --seal: #e0704f;
+      --link: #e88a6c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b1712;
+    --bg-soft: #241f18;
+    --line: #3a3327;
+    --ink: #f0ece2;
+    --ink-soft: #c9c0ac;
+    --ink-faint: #8f8672;
+    --seal: #e0704f;
+    --link: #e88a6c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+    line-height: 1.8;
+  }
+  a { color: var(--link); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  nav.site {
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+  }
+  nav.site .wrap { display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 18px; text-decoration: none; color: var(--ink); }
+  .navlinks { display: flex; gap: 20px; font-size: 13.5px; }
+  .navlinks a { text-decoration: none; color: var(--ink-soft); }
+  .navlinks a:hover { color: var(--link); }
+
+  .hero { padding: 72px 0 48px; text-align: center; }
+  .hero-icon {
+    width: 72px; height: 72px; border-radius: 17px; margin: 0 auto 24px; display: block;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+  .hero h1 { font-family: "Shippori Mincho", serif; font-size: 30px; font-weight: 700; margin: 0 0 14px; }
+  .hero p.lead { font-size: 16px; color: var(--ink-soft); max-width: 32em; margin: 0 auto; }
+
+  section.feature { padding: 40px 0; border-top: 1px solid var(--line); }
+  section.feature h2 { font-family: "Shippori Mincho", serif; font-size: 20px; margin: 0 0 10px; }
+  section.feature p { font-size: 14.5px; color: var(--ink-soft); margin: 0; }
+  .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+  .feature-grid .item h3 { font-size: 15px; font-weight: 700; margin: 0 0 6px; }
+  .feature-grid .item p { font-size: 13.5px; color: var(--ink-soft); margin: 0; }
+
+  .cta { padding: 48px 0; text-align: center; border-top: 1px solid var(--line); }
+  .cta p { font-size: 14px; color: var(--ink-faint); }
+
+  footer.site { border-top: 1px solid var(--line); padding: 28px 0; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+  footer.site .links { display: flex; gap: 18px; font-size: 13px; }
+  footer.site .links a { text-decoration: none; color: var(--ink-soft); }
+  footer.site .copyright { font-size: 12.5px; color: var(--ink-faint); }
+
+  @media (max-width: 560px) {
+    .feature-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">地縛板</a>
+    <div class="navlinks">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="wrap">
+    <svg class="hero-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="100" height="100" rx="22" fill="#29241c"/>
+      <rect x="26" y="34" width="48" height="24" rx="3" fill="#f7f5f1"/>
+      <circle cx="50" cy="46" r="6" fill="#b8472e"/>
+      <path d="M46 58 L54 58 L50 82 Z" fill="#f7f5f1"/>
+    </svg>
+    <h1>地縛板</h1>
+    <p class="lead">地図上の「その場所」に板を立て、実際に足を運んだ人だけが読める掲示板アプリです。</p>
+  </div>
+</div>
+
+<section class="feature">
+  <div class="wrap">
+    <h2>その場に行かないと読めない</h2>
+    <p>板に書かれた投稿は、実際にその場所に近づいた時だけ読むことができます。地図の上を眺めているだけでは、中身までは分かりません。</p>
+    <div class="feature-grid">
+      <div class="item">
+        <h3>板を立てる</h3>
+        <p>好きな場所にピンを立てて、テキスト・写真・動画・音声で投稿できます。</p>
+      </div>
+      <div class="item">
+        <h3>近づいて読む</h3>
+        <p>板から一定の距離に入ると、その場に立てられた投稿を読めるようになります。</p>
+      </div>
+      <div class="item">
+        <h3>板は朽ちていく</h3>
+        <p>板には寿命があり、時間とともに古びて、やがて読めなくなります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <p>現在、対応端末・提供地域を順次拡大しています。</p>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="links">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+    </div>
+    <div class="copyright">&copy; 2026 合同会社粋人舎</div>
+  </div>
+</footer>
