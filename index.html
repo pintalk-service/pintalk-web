@@ -3,21 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>合同会社粋人舎</title>
-<meta http-equiv="refresh" content="0; url=./pintalk/">
+<title>会社概要 | 合同会社粋人舎</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
 <style>
-  body {
-    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    background: #ffffff; color: #29241c; font-family: "Hiragino Sans", sans-serif;
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f7f5f1;
+    --line: #e4e0d8;
+    --ink: #29241c;
+    --ink-soft: #5c5646;
+    --ink-faint: #918a76;
+    --seal: #b8472e;
+    --link: #8a3524;
+    --flag-bg: #fdf1ea;
+    --flag-border: #e7bfa5;
   }
   @media (prefers-color-scheme: dark) {
-    body { background: #1b1712; color: #f0ece2; }
+    :root:not([data-theme="light"]) {
+      --bg: #1b1712;
+      --bg-soft: #241f18;
+      --line: #3a3327;
+      --ink: #f0ece2;
+      --ink-soft: #c9c0ac;
+      --ink-faint: #8f8672;
+      --seal: #e0704f;
+      --link: #e88a6c;
+      --flag-bg: #33241c;
+      --flag-border: #6b4230;
+    }
   }
-  a { color: inherit; }
-  p { font-size: 14px; }
+  :root[data-theme="dark"] {
+    --bg: #1b1712;
+    --bg-soft: #241f18;
+    --line: #3a3327;
+    --ink: #f0ece2;
+    --ink-soft: #c9c0ac;
+    --ink-faint: #8f8672;
+    --seal: #e0704f;
+    --link: #e88a6c;
+    --flag-bg: #33241c;
+    --flag-border: #6b4230;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+    line-height: 1.85;
+  }
+  a { color: var(--link); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  nav.site { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  nav.site .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .brand { font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 18px; text-decoration: none; color: var(--ink); }
+  .navlinks { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  .navlinks a { text-decoration: none; color: var(--ink-soft); }
+  .navlinks a:hover { color: var(--link); }
+
+  .hero { padding: 64px 0 40px; }
+  .hero .seal-mark {
+    width: 48px; height: 48px; border-radius: 10px; margin-bottom: 20px;
+    background: var(--seal); color: #fdf1ea; display: flex; align-items: center; justify-content: center;
+    font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 20px;
+  }
+  .hero h1 { font-family: "Shippori Mincho", serif; font-size: 28px; font-weight: 700; margin: 0 0 12px; }
+  .hero p.lead { font-size: 15px; color: var(--ink-soft); max-width: 34em; margin: 0; }
+
+  section { padding: 32px 0; border-top: 1px solid var(--line); }
+  section h2 { font-family: "Shippori Mincho", serif; font-size: 19px; margin: 0 0 18px; }
+
+  .fillin {
+    background: var(--flag-bg); border: 1px solid var(--flag-border); border-radius: 6px;
+    padding: 14px 18px; font-size: 13px; color: var(--ink-soft); margin-bottom: 8px;
+  }
+  .fillin b { color: var(--ink); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th, td { text-align: left; padding: 11px 12px; border: 1px solid var(--line); color: var(--ink-soft); vertical-align: top; }
+  th { background: var(--bg-soft); color: var(--ink); font-weight: 700; width: 32%; white-space: nowrap; }
+  mark.fill { background: var(--flag-bg); color: var(--seal); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+
+  .service-card {
+    display: flex; align-items: center; gap: 16px;
+    border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px;
+    text-decoration: none; color: var(--ink);
+  }
+  .service-card:hover { border-color: var(--seal); }
+  .service-card .icon {
+    width: 44px; height: 44px; border-radius: 10px; flex: none;
+    background: #29241c; position: relative; overflow: hidden;
+  }
+  .service-card .icon svg { display: block; width: 100%; height: 100%; }
+  .service-card .body h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; }
+  .service-card .body p { margin: 0; font-size: 13px; color: var(--ink-soft); }
+  .service-card .arrow { margin-left: auto; color: var(--ink-faint); font-size: 18px; }
+
+  footer.site { border-top: 1px solid var(--line); padding: 28px 0; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+  footer.site .links { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  footer.site .links a { text-decoration: none; color: var(--ink-soft); }
+  footer.site .copyright { font-size: 12.5px; color: var(--ink-faint); }
 </style>
 </head>
 <body>
-  <p>合同会社粋人舎 — <a href="./pintalk/">地縛板はこちら</a></p>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">合同会社粋人舎</a>
+    <div class="navlinks">
+      <a href="./pintalk/">地縛板(アプリサイト)</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="seal-mark">粋</div>
+    <h1>合同会社粋人舎</h1>
+    <p class="lead">スマートフォンアプリケーションの企画・開発・運営を行う会社です。第一弾のプロダクトとして、位置情報を用いた掲示板アプリ「地縛板」を提供しています。</p>
+  </div>
+
+  <section>
+    <h2>会社概要</h2>
+    <div class="fillin">
+      <b>ご確認ください:</b> 現在法人設立の手続き中のため、<mark class="fill">黄色でマークした箇所</mark>は設立完了後に確定した内容へ差し替えます。
+    </div>
+    <table>
+      <tr><th>商号</th><td>合同会社粋人舎</td></tr>
+      <tr><th>設立年月日</th><td><mark class="fill">【設立年月日】</mark></td></tr>
+      <tr><th>所在地</th><td><mark class="fill">【本店所在地】</mark></td></tr>
+      <tr><th>代表者</th><td><mark class="fill">【代表社員氏名】</mark></td></tr>
+      <tr><th>資本金</th><td><mark class="fill">【資本金】</mark></td></tr>
+      <tr><th>事業内容</th><td>スマートフォンアプリケーションの企画・開発・運営</td></tr>
+      <tr><th>お問い合わせ先</th><td>pintalk@suijin-sha.com</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>提供サービス</h2>
+    <a class="service-card" href="./pintalk/">
+      <div class="icon">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="26" y="34" width="48" height="24" rx="3" fill="#f7f5f1"/>
+          <circle cx="50" cy="46" r="6" fill="#b8472e"/>
+          <path d="M46 58 L54 58 L50 82 Z" fill="#f7f5f1"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h3>地縛板</h3>
+        <p>その場所に足を運んだ人だけが読める、位置情報連動の掲示板アプリ。</p>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="links">
+      <a href="./pintalk/privacy.html">プライバシーポリシー</a>
+      <a href="./pintalk/terms.html">利用規約</a>
+      <a href="./pintalk/tokushoho.html">特定商取引法に基づく表示</a>
+    </div>
+    <div class="copyright">&copy; 2026 合同会社粋人舎</div>
+  </div>
+</footer>
+
 </body>
 </html>
