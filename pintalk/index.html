@@ -51,9 +51,15 @@
     padding: 18px 0;
   }
   nav.site .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-  .brand { font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 18px; text-decoration: none; color: var(--ink); }
+  .brand { display: flex; align-items: center; gap: 8px; font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 18px; text-decoration: none; color: var(--ink); }
+  .brand-icon {
+    width: 22px; height: 22px; border-radius: 6px; flex: none;
+    background: var(--seal); color: #fdf1ea; display: flex; align-items: center; justify-content: center;
+    font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 12px;
+  }
   .navlinks { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
   .navlinks a { text-decoration: none; color: var(--ink-soft); }
+  .navlinks a.current { color: var(--seal); font-weight: 700; }
   .navlinks a:hover { color: var(--link); }
 
   .hero { padding: 72px 0 48px; text-align: center; }
@@ -87,8 +93,9 @@
 
 <nav class="site">
   <div class="wrap">
-    <a class="brand" href="index.html">地縛板</a>
+    <a class="brand" href="../index.html"><span class="brand-icon">粋</span>合同会社粋人舎</a>
     <div class="navlinks">
+      <a class="current" href="index.html">地縛板</a>
       <a href="privacy.html">プライバシーポリシー</a>
       <a href="terms.html">利用規約</a>
       <a href="tokushoho.html">特定商取引法に基づく表示</a>
