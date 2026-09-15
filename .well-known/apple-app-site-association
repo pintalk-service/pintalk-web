@@ -1,15 +1,11 @@
 {
   "applinks": {
+    "apps": [],
     "details": [
       {
+        "appID": "R4BUWTQF7J.com.suijinsha.pintalk",
         "appIDs": ["R4BUWTQF7J.com.suijinsha.pintalk"],
-        "components": [
-          {
-            "/": "/pintalk/share/",
-            "?": { "id": "?*" },
-            "comment": "Board share links, e.g. https://www.suijin-sha.com/pintalk/share/?id=123"
-          }
-        ]
+        "paths": ["/pintalk/share/*"]
       }
     ]
   }
