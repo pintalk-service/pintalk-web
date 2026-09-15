@@ -130,9 +130,9 @@
   // 開いた人向けの案内文の出し分けのみを行う。
   (function () {
     var params = new URLSearchParams(location.search);
-    var id = params.get('id');
+    var token = params.get('token');
     var statusEl = document.getElementById('open-status');
-    if (id) {
+    if (token) {
       statusEl.textContent = 'アプリがインストールされていれば自動的に開きます。開かない場合は下のボタンからアプリを入手してください。';
     } else {
       statusEl.textContent = 'この板は見つかりませんでした。';
