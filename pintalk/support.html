@@ -1,0 +1,170 @@
+<title>サポート | 地縛板</title>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f7f5f1;
+    --line: #e4e0d8;
+    --ink: #29241c;
+    --ink-soft: #5c5646;
+    --ink-faint: #918a76;
+    --seal: #b8472e;
+    --link: #8a3524;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b1712;
+      --bg-soft: #241f18;
+      --line: #3a3327;
+      --ink: #f0ece2;
+      --ink-soft: #c9c0ac;
+      --ink-faint: #8f8672;
+      --seal: #e0704f;
+      --link: #e88a6c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b1712;
+    --bg-soft: #241f18;
+    --line: #3a3327;
+    --ink: #f0ece2;
+    --ink-soft: #c9c0ac;
+    --ink-faint: #8f8672;
+    --seal: #e0704f;
+    --link: #e88a6c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+    line-height: 1.85;
+  }
+  a { color: var(--link); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  nav.site { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  nav.site .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .brand { display: flex; align-items: center; gap: 8px; font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 18px; text-decoration: none; color: var(--ink); }
+  .brand-icon {
+    width: 22px; height: 22px; border-radius: 6px; flex: none;
+    background: var(--seal); color: #fdf1ea; display: flex; align-items: center; justify-content: center;
+    font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 12px;
+  }
+  .navlinks { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  .navlinks a { text-decoration: none; color: var(--ink-soft); }
+  .navlinks a.current { color: var(--seal); font-weight: 700; }
+  .navlinks a:hover { color: var(--link); }
+
+  main { padding: 48px 0 80px; }
+  h1 { font-family: "Shippori Mincho", serif; font-size: 26px; margin: 0 0 6px; }
+  p.lead { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 36px; }
+
+  h2 {
+    font-family: "Shippori Mincho", serif; font-size: 18px; margin: 0 0 14px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  }
+  section { margin-bottom: 40px; }
+
+  details {
+    border: 1px solid var(--line); border-radius: 8px;
+    margin-bottom: 10px; padding: 14px 16px;
+  }
+  details[open] { background: var(--bg-soft); }
+  summary {
+    font-weight: 700; font-size: 14.5px; cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "Q. "; color: var(--seal); }
+  details p {
+    font-size: 14px; color: var(--ink-soft); margin: 10px 0 0; padding-left: 1.6em;
+  }
+
+  .contact-card {
+    border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px;
+  }
+  .contact-card p { font-size: 14px; color: var(--ink-soft); margin: 0 0 8px; }
+  .contact-card a.mail { font-weight: 700; font-size: 15px; }
+
+  footer.site { border-top: 1px solid var(--line); padding: 28px 0; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+  footer.site .links { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  footer.site .links a { text-decoration: none; color: var(--ink-soft); }
+  footer.site .copyright { font-size: 12.5px; color: var(--ink-faint); }
+</style>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="brand-icon">粋</span>合同会社粋人舎</a>
+    <div class="navlinks">
+      <a href="index.html">地縛板</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <a href="tokushoho.html">特定商取引法に基づく表示</a>
+      <a class="current" href="support.html">サポート</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <h1>サポート</h1>
+  <p class="lead">「地縛板」のご利用でお困りの際は、よくあるご質問をご確認いただくか、下記のお問い合わせ先までご連絡ください。</p>
+
+  <section>
+    <h2>よくあるご質問</h2>
+
+    <details>
+      <summary>「板」や「投稿」とは何ですか?</summary>
+      <p>「板」は地図上の特定の場所に立てるピンで、その場所に対して自由にテキスト・写真・動画・音声を「投稿」できます。板に書かれた投稿は、実際にその場所へ近づいた利用者だけが読めるようになっています。</p>
+    </details>
+
+    <details>
+      <summary>投稿の中身が表示されず、件数しか見えません</summary>
+      <p>「地縛板」の投稿は、その場所から一定の距離(既定10m)以内に近づいた時だけ読めるようになっています。地図上でピンを見つけても、実際に現地へ足を運ぶまでは投稿数のみが表示され、内容は表示されません。</p>
+    </details>
+
+    <details>
+      <summary>板が「破れ板」になっています。もう読めませんか?</summary>
+      <p>板には表示期間があり、期限が過ぎると「破れ板」となって投稿内容を読めなくなります。板の詳細画面から表示期間を延長できる場合があります。</p>
+    </details>
+
+    <details>
+      <summary>サブスクリプションの解約や、購入した内容の返金はどうすればいいですか?</summary>
+      <p>サブスクリプション・アイテムの購入はApp Storeを通じて行われるため、解約手続きやお支払いに関するお問い合わせは、iPhoneの「設定」アプリ内のサブスクリプション管理、またはAppleのサポートをご利用ください。</p>
+    </details>
+
+    <details>
+      <summary>不適切な投稿や迷惑なユーザーを見つけました</summary>
+      <p>各投稿を長押しすると「通報」「このユーザーをブロック」を選択できます。ブロックすると、以後そのユーザーの投稿は表示されなくなります。ブロックの解除は、マイページの「ブロック中のユーザー」から行えます。</p>
+    </details>
+
+    <details>
+      <summary>退会したい場合はどうすればいいですか?</summary>
+      <p>マイページから、いつでもご自身のアカウントを退会いただけます。退会後も、他の利用者との会話を保つため投稿済みのコンテンツが削除されない場合があります。詳しくは<a href="terms.html">利用規約</a>をご確認ください。</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>お問い合わせ</h2>
+    <div class="contact-card">
+      <p>上記で解決しない場合は、以下のメールアドレスまでご連絡ください。</p>
+      <a class="mail" href="mailto:pintalk@suijin-sha.com">pintalk@suijin-sha.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="links">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <a href="tokushoho.html">特定商取引法に基づく表示</a>
+      <a href="support.html">サポート</a>
+    </div>
+    <div class="copyright">&copy; 2026 合同会社粋人舎</div>
+  </div>
+</footer>
