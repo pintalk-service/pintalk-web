@@ -1,0 +1,222 @@
+<title>使い方ガイド | 地縛板</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f7f5f1;
+    --line: #e4e0d8;
+    --ink: #29241c;
+    --ink-soft: #5c5646;
+    --ink-faint: #918a76;
+    --seal: #b8472e;
+    --link: #8a3524;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b1712;
+      --bg-soft: #241f18;
+      --line: #3a3327;
+      --ink: #f0ece2;
+      --ink-soft: #c9c0ac;
+      --ink-faint: #8f8672;
+      --seal: #e0704f;
+      --link: #e88a6c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b1712;
+    --bg-soft: #241f18;
+    --line: #3a3327;
+    --ink: #f0ece2;
+    --ink-soft: #c9c0ac;
+    --ink-faint: #8f8672;
+    --seal: #e0704f;
+    --link: #e88a6c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+    line-height: 1.85;
+  }
+  a { color: var(--link); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  nav.site { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  nav.site .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .brand { display: flex; align-items: center; gap: 8px; font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 18px; text-decoration: none; color: var(--ink); }
+  .brand-icon {
+    width: 22px; height: 22px; border-radius: 6px; flex: none;
+    background: var(--seal); color: #fdf1ea; display: flex; align-items: center; justify-content: center;
+    font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 12px;
+  }
+  .navlinks { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  .navlinks a { text-decoration: none; color: var(--ink-soft); }
+  .navlinks a.current { color: var(--seal); font-weight: 700; }
+  .navlinks a:hover { color: var(--link); }
+
+  main { padding: 48px 0 80px; }
+  h1 { font-family: "Shippori Mincho", serif; font-size: 26px; margin: 0 0 6px; }
+  p.lead { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 32px; }
+
+  nav.toc {
+    background: var(--bg-soft); border: 1px solid var(--line); border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 44px;
+  }
+  nav.toc p { margin: 0 0 10px; font-size: 12.5px; font-weight: 700; color: var(--ink-faint); letter-spacing: 0.04em; }
+  nav.toc ol { margin: 0; padding-left: 1.4em; font-size: 13.5px; }
+  nav.toc li { margin-bottom: 4px; }
+  nav.toc a { text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+
+  section.chapter { margin-bottom: 48px; scroll-margin-top: 20px; }
+  .chapter-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; border-radius: 50%; background: var(--seal); color: #fdf1ea;
+    font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 13px; margin-right: 10px; flex: none;
+  }
+  h2 {
+    font-family: "Shippori Mincho", serif; font-size: 19px; margin: 0 0 14px;
+    display: flex; align-items: center;
+    padding-bottom: 10px; border-bottom: 1px solid var(--line);
+  }
+  section.chapter p { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 12px; }
+  section.chapter ul { margin: 0 0 12px; padding-left: 1.4em; font-size: 14px; color: var(--ink-soft); }
+  section.chapter li { margin-bottom: 6px; }
+  section.chapter .tip {
+    font-size: 13px; color: var(--ink-faint); border-left: 3px solid var(--line);
+    padding: 4px 0 4px 14px; margin: 14px 0 0;
+  }
+
+  .cta { padding: 8px 0 0; text-align: center; }
+  .cta-link {
+    display: inline-block; text-decoration: none; font-weight: 700; font-size: 14px;
+    color: #fdf1ea; background: var(--ink); padding: 12px 28px; border-radius: 999px;
+  }
+  .cta-link:hover { opacity: 0.9; }
+
+  footer.site { border-top: 1px solid var(--line); padding: 28px 0; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+  footer.site .links { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  footer.site .links a { text-decoration: none; color: var(--ink-soft); }
+  footer.site .copyright { font-size: 12.5px; color: var(--ink-faint); }
+</style>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="brand-icon">粋</span>合同会社粋人舎</a>
+    <div class="navlinks">
+      <a href="index.html">地縛板</a>
+      <a class="current" href="guide.html">使い方ガイド</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <a href="tokushoho.html">特定商取引法に基づく表示</a>
+      <a href="support.html">サポート</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <h1>使い方ガイド</h1>
+  <p class="lead">「地縛板」は、地図上のその場所に行かないと読めない掲示板アプリです。ここでは、板を立てるところから、有料オプションまでの流れを順を追って説明します。</p>
+
+  <nav class="toc" aria-label="目次">
+    <p>目次</p>
+    <ol>
+      <li><a href="#chapter-1">まずは白板を立ててみよう</a></li>
+      <li><a href="#chapter-2">テキスト以外の投稿もしてみよう</a></li>
+      <li><a href="#chapter-3">白板の一生</a></li>
+      <li><a href="#chapter-4">検索してみよう</a></li>
+      <li><a href="#chapter-5">通知を受けてみよう</a></li>
+      <li><a href="#chapter-6">マップを見て、気になる板をチェックしてみよう</a></li>
+      <li><a href="#chapter-7">有料オプションを使ってみよう</a></li>
+    </ol>
+  </nav>
+
+  <section class="chapter" id="chapter-1">
+    <h2><span class="chapter-num">1</span>まずは白板を立ててみよう</h2>
+    <p>地図上の好きな場所をタップすると、その場所に板を立てられます。誰でも無料で立てられるのが「白板」です。確認画面で内容を決めたら、そのまま最初の投稿を書いてみましょう。</p>
+    <p>板はその場所そのものに結びついています。立てた本人はもちろん、他の利用者もその場所へ実際に近づけば、書かれている投稿を読むことができます。</p>
+    <p class="tip">場所を間違えないよう、地図を十分に拡大してからタップすることをおすすめします。</p>
+  </section>
+
+  <section class="chapter" id="chapter-2">
+    <h2><span class="chapter-num">2</span>テキスト以外の投稿もしてみよう</h2>
+    <p>板への投稿は文章だけではありません。写真・動画・音声でも投稿できます。同じ板に何度でも、他の利用者が投稿を重ねていくこともできます。</p>
+    <ul>
+      <li>写真・動画:その場所の景色や出来事をそのまま残せます</li>
+      <li>音声:文章にしにくい音や、その場の空気感を伝えるのに向いています</li>
+    </ul>
+    <p>投稿の種類は後から検索条件としても使えるので、内容に合わせて自由に使い分けてみてください。</p>
+  </section>
+
+  <section class="chapter" id="chapter-3">
+    <h2><span class="chapter-num">3</span>白板の一生</h2>
+    <p>板には寿命があります。立てたばかりの「新板」は、時間が経つと「通常」の状態になり、期限が近づくと「古板」になります。そして表示期間が過ぎると「破れ板」となり、投稿の中身は読めなくなります。</p>
+    <p>「金板」として立てた板は扱いが異なります。板立人サブスクが有効な間は、金板は破れずに表示され続けます。サブスクが切れても、しばらくの猶予期間が用意されています。</p>
+    <p>白板・金板のどちらも、「表示期間延長権」を使えばその場で寿命を延ばせます。気に入った板が破れそうな時は、誰でも延長を宣言できます。</p>
+  </section>
+
+  <section class="chapter" id="chapter-4">
+    <h2><span class="chapter-num">4</span>検索してみよう</h2>
+    <p>検索アイコンから、板をキーワードや条件で探せます。</p>
+    <ul>
+      <li>フリーワード:タイトルや投稿本文から探す</li>
+      <li>投稿の種類:テキスト・写真・動画・音声で絞り込む</li>
+      <li>現在地からの距離:100m以内・1km以内・10km以内などで絞り込む</li>
+    </ul>
+    <p>気になる板が見つかったら、実際にその場所まで足を運んでみましょう。</p>
+  </section>
+
+  <section class="chapter" id="chapter-5">
+    <h2><span class="chapter-num">5</span>通知を受けてみよう</h2>
+    <p>板の詳細画面から「気になる場所」に登録しておくと、マイページの一覧にまとめて表示され、新着があれば未読件数として確認できます。</p>
+    <p>通知設定では、以下のように受け取り方を細かく調整できます。</p>
+    <ul>
+      <li>特定のタグが付いた板だけ通知を受け取る</li>
+      <li>破れ板になった板も通知に含めるかどうか</li>
+      <li>金板だけを通知の対象にするかどうか</li>
+    </ul>
+    <p class="tip">マイページ →「通知設定」から、いつでも変更できます。</p>
+  </section>
+
+  <section class="chapter" id="chapter-6">
+    <h2><span class="chapter-num">6</span>マップを見て、気になる板をチェックしてみよう</h2>
+    <p>地図を眺めているだけでも、次に行ってみたい場所が見つかることがあります。投稿が多く集まっている板の周りには、薄い赤色の円が重なって表示されます。これが「ホットスポット」です。円が濃く見える場所ほど、板や投稿が密集している賑わいのあるエリアだということです。</p>
+    <p>ホットスポットを目印に街を歩いてみると、思いがけない場所に板が立てられていることに気づくはずです。</p>
+  </section>
+
+  <section class="chapter" id="chapter-7">
+    <h2><span class="chapter-num">7</span>有料オプションを使ってみよう</h2>
+    <p>「地縛板」は基本的に無料で使えますが、マイページの「購入・アイテム」から、以下の有料オプションを利用できます。</p>
+    <ul>
+      <li><strong>板立人(サブスクリプション)</strong>:有効な間、自分の金板が破れずに表示され続けます</li>
+      <li><strong>金板を立てる権</strong>:購入した回数分、金板を立てられます</li>
+      <li><strong>破れ板を見る権</strong>:自分の破れ板を、購入するたびに一定時間だけ読めるようにします</li>
+      <li><strong>表示期間延長権</strong>:白板・金板を問わず、板の寿命をその場で延ばします</li>
+    </ul>
+    <p class="tip">購入・解約はすべてApp Storeを通じて行われます。詳しくは<a href="support.html">サポート</a>ページもご確認ください。</p>
+  </section>
+
+  <div class="cta">
+    <a class="cta-link" href="https://apps.apple.com/jp/app/id6808533653">地縛板をはじめる</a>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="links">
+      <a href="guide.html">使い方ガイド</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <a href="tokushoho.html">特定商取引法に基づく表示</a>
+      <a href="support.html">サポート</a>
+    </div>
+    <div class="copyright">&copy; 2026 合同会社粋人舎</div>
+  </div>
+</footer>
