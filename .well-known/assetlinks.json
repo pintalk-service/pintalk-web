@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.suijinsha.pintalk",
+      "sha256_cert_fingerprints": [
+        "DC:88:43:07:74:D5:3C:E2:58:D2:0D:CD:7D:64:E3:61:77:8F:32:15:58:D0:93:02:3D:60:2F:AD:E9:FB:4D:D7"
+      ]
+    }
+  }
+]
