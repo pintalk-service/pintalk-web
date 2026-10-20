@@ -1,11 +1,14 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.suijinsha.pintalk",
       "sha256_cert_fingerprints": [
-        "DC:88:43:07:74:D5:3C:E2:58:D2:0D:CD:7D:64:E3:61:77:8F:32:15:58:D0:93:02:3D:60:2F:AD:E9:FB:4D:D7"
+        "DC:88:43:07:74:D5:3C:E2:58:D2:0D:CD:7D:64:E3:61:77:8F:32:15:58:D0:93:02:3D:60:2F:AD:E9:FB:4D:D7",
+        "7D:F9:11:9F:92:1E:71:A9:8E:20:52:34:5B:79:62:A7:CF:9A:62:A1:F5:62:E7:BB:CC:0C:38:10:13:3D:97:4E"
       ]
     }
   }
