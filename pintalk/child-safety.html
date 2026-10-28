@@ -1,0 +1,175 @@
+<title>子どもの安全基準 | 地縛板</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f7f5f1;
+    --line: #e4e0d8;
+    --ink: #29241c;
+    --ink-soft: #5c5646;
+    --ink-faint: #918a76;
+    --seal: #b8472e;
+    --link: #8a3524;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b1712;
+      --bg-soft: #241f18;
+      --line: #3a3327;
+      --ink: #f0ece2;
+      --ink-soft: #c9c0ac;
+      --ink-faint: #8f8672;
+      --seal: #e0704f;
+      --link: #e88a6c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b1712;
+    --bg-soft: #241f18;
+    --line: #3a3327;
+    --ink: #f0ece2;
+    --ink-soft: #c9c0ac;
+    --ink-faint: #8f8672;
+    --seal: #e0704f;
+    --link: #e88a6c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+    line-height: 1.85;
+  }
+  a { color: var(--link); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  nav.site { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  nav.site .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .brand { display: flex; align-items: center; gap: 8px; font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 18px; text-decoration: none; color: var(--ink); }
+  .brand-icon {
+    width: 22px; height: 22px; border-radius: 6px; flex: none;
+    background: var(--seal); color: #fdf1ea; display: flex; align-items: center; justify-content: center;
+    font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 12px;
+  }
+  .navlinks { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  .navlinks a { text-decoration: none; color: var(--ink-soft); }
+  .navlinks a.current { color: var(--seal); font-weight: 700; }
+  .navlinks a:hover { color: var(--link); }
+
+  main { padding: 48px 0 80px; }
+  h1 { font-family: "Shippori Mincho", serif; font-size: 26px; margin: 0 0 6px; }
+  p.lead { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 36px; }
+
+  h2 {
+    font-family: "Shippori Mincho", serif; font-size: 18px; margin: 0 0 14px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  }
+  section { margin-bottom: 40px; }
+
+  details {
+    border: 1px solid var(--line); border-radius: 8px;
+    margin-bottom: 10px; padding: 14px 16px;
+  }
+  details[open] { background: var(--bg-soft); }
+  summary {
+    font-weight: 700; font-size: 14.5px; cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "Q. "; color: var(--seal); }
+  details p {
+    font-size: 14px; color: var(--ink-soft); margin: 10px 0 0; padding-left: 1.6em;
+  }
+
+  .contact-card {
+    border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px;
+  }
+  .contact-card p { font-size: 14px; color: var(--ink-soft); margin: 0 0 8px; }
+  .contact-card a.mail { font-weight: 700; font-size: 15px; }
+
+  footer.site { border-top: 1px solid var(--line); padding: 28px 0; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+  footer.site .links { display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  footer.site .links a { text-decoration: none; color: var(--ink-soft); }
+  footer.site .copyright { font-size: 12.5px; color: var(--ink-faint); }
+
+  ol.steps { font-size: 14.5px; color: var(--ink-soft); padding-left: 1.4em; margin: 0 0 8px; }
+  ol.steps li { margin-bottom: 4px; }
+  table.data { width: 100%; border-collapse: collapse; font-size: 14px; }
+  table.data th, table.data td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+  table.data th { background: var(--bg-soft); width: 34%; font-weight: 700; }
+  p.note { font-size: 13px; color: var(--ink-faint); margin: 10px 0 0; }
+</style>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="brand-icon">粋</span>合同会社粋人舎</a>
+    <div class="navlinks">
+      <a href="index.html">地縛板</a>
+      <a href="guide.html">使い方ガイド</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <a href="tokushoho.html">特定商取引法に基づく表示</a>
+      <a href="support.html">サポート</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <h1>子どもの安全基準</h1>
+  <p class="lead">「地縛板」では、児童の性的虐待と搾取(CSAE)およびこれに関連するコンテンツを一切認めません。本ページでは、そのための基準と、通報・対応の方法をご案内します。</p>
+
+  <section>
+    <h2>禁止している行為・コンテンツ</h2>
+    <ul style="font-size:14.5px;color:var(--ink-soft);padding-left:1.4em;margin:0;">
+      <li>児童の性的虐待・搾取に当たる、または助長する投稿(テキスト・写真・動画・音声)</li>
+      <li>児童に対する性的な勧誘、誘い出し(グルーミング)、接触を目的とする行為</li>
+      <li>児童の位置情報や個人情報を、危害を加える目的で公開する行為</li>
+    </ul>
+    <p class="note">これらは<a href="terms.html">利用規約</a>で禁止しており、違反した利用者には、投稿の削除、利用制限、アカウントの停止などの措置を講じます。</p>
+  </section>
+
+  <section>
+    <h2>アプリ内での通報</h2>
+    <ol class="steps">
+      <li>問題のある投稿を、長押しします。</li>
+      <li>表示されたメニューから「通報」を選びます。</li>
+      <li>確認画面で「通報する」を押すと、送信されます。</li>
+    </ol>
+    <p class="note">迷惑な利用者は、「このユーザーをブロック」で非表示にできます。</p>
+  </section>
+
+  <section>
+    <h2>通報を受けたときの対応</h2>
+    <ul style="font-size:14.5px;color:var(--ink-soft);padding-left:1.4em;margin:0;">
+      <li>通報を受けた投稿は、速やかに内容を確認し、原則として通報から24時間以内に対応します。</li>
+      <li>児童の安全に関わる違反が確認された場合は、該当する投稿を削除し、当該の利用者に対して利用制限・アカウント停止などの措置を講じます。</li>
+      <li>児童の安全に関連する法令を遵守し、必要に応じて、国や地域の関係当局へ報告します。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>連絡先</h2>
+    <div class="contact-card">
+      <p>児童の安全に関するご連絡、および児童の性的虐待コンテンツの防止対策に関するお問い合わせは、下記のメールアドレスまでお知らせください。</p>
+      <a class="mail" href="mailto:support@suijin-sha.com?subject=%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E5%AE%89%E5%85%A8%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E9%80%A3%E7%B5%A1">support@suijin-sha.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="links">
+      <a href="guide.html">使い方ガイド</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <a href="tokushoho.html">特定商取引法に基づく表示</a>
+      <a href="support.html">サポート</a>
+    </div>
+    <div class="copyright">&copy; 2026 合同会社粋人舎</div>
+  </div>
+</footer>
